@@ -4,10 +4,10 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
-    });
+    })->name('dashboard');
 
     Route::group(['prefix' => 'email'], function () {
         Route::get('inbox', function () {
