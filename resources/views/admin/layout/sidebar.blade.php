@@ -1,7 +1,7 @@
 <nav class="sidebar">
   <div class="sidebar-header">
     <a href="{{route('dashboard')}}" class="sidebar-brand">
-      Noble<span>UI</span>
+        Brooklyn<span>UI</span>
     </a>
     <div class="sidebar-toggler not-active">
       <span></span>
