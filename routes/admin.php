@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\GallerycategoryController;
+use App\Http\Controllers\GalleryController;
+use App\Models\GalleryCategory;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
@@ -8,6 +11,9 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
+
+    Route::resource('gallerycategory', GallerycategoryController::class);
+    Route::resource('gallery', GalleryController::class);
 
     Route::group(['prefix' => 'email'], function () {
         Route::get('inbox', function () {

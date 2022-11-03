@@ -20,7 +20,8 @@ class SiteSeeder extends Seeder
             'mobile'    => null,
             'email'     => 'miziporan@gmail.com',
             'phone'     => '929-465-6598',
-            'phone2'    => '347-369-0679'
+            'phone2'    => '347-369-0679',
+            'address'   => '993 Pacific Street, Broklyn, NY 11238'
         ]);
     }
 }

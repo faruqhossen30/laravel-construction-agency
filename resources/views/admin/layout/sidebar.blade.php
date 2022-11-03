@@ -13,28 +13,27 @@
     <ul class="nav">
       <li class="nav-item nav-category">Main</li>
       <li class="nav-item {{ active_class(['/']) }}">
-        <a href="{{ url('admin/') }}" class="nav-link">
+        <a href="{{ route('dashboard') }}" class="nav-link">
           <i class="link-icon" data-feather="box"></i>
           <span class="link-title">Dashboard</span>
         </a>
       </li>
-      <li class="nav-item nav-category">web apps</li>
       <li class="nav-item {{ active_class(['email/*']) }}">
         <a class="nav-link" data-bs-toggle="collapse" href="#email" role="button" aria-expanded="{{ is_active_route(['email/*']) }}" aria-controls="email">
           <i class="link-icon" data-feather="mail"></i>
-          <span class="link-title">Email</span>
+          <span class="link-title">Gallery</span>
           <i class="link-arrow" data-feather="chevron-down"></i>
         </a>
         <div class="collapse {{ show_class(['email/*']) }}" id="email">
           <ul class="nav sub-menu">
             <li class="nav-item">
-              <a href="{{ url('admin/email/inbox') }}" class="nav-link {{ active_class(['email/inbox']) }}">Inbox</a>
+              <a href="{{ route('gallerycategory.index') }}" class="nav-link {{ active_class(['email/inbox']) }}">Category</a>
             </li>
             <li class="nav-item">
-              <a href="{{ url('admin/email/read') }}" class="nav-link {{ active_class(['email/read']) }}">Read</a>
+              <a href="{{ route('gallery.index') }}" class="nav-link {{ active_class(['email/read']) }}">All Gallery</a>
             </li>
             <li class="nav-item">
-              <a href="{{ url('admin/email/compose') }}" class="nav-link {{ active_class(['email/compose']) }}">Compose</a>
+              <a href="{{ route('gallery.create') }}" class="nav-link {{ active_class(['email/compose']) }}">Add Gallery</a>
             </li>
           </ul>
         </div>

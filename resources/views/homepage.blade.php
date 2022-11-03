@@ -8,7 +8,7 @@
                 <li data-fstransition="fade" data-transition="fade" data-easein="default" data-easeout="default"
                     data-slotamount="1" data-masterspeed="1200" data-delay="8000" data-title="Modern Living Room">
                     <!-- MAIN IMAGE -->
-                    <img src="{{ asset('frontend') }}/img/revolution/home-1/1.jpg" alt="" data-bgrepeat="no-repeat"
+                    <img src="/img/1.jpg" alt="" data-bgrepeat="no-repeat"
                         data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
 
                     <!-- HERO TITLE -->
@@ -28,7 +28,7 @@
 									"frame":"999",
 									"to":"opacity:0;","ease":"Power3.easeOut"
 								}]'
-                        data-splitout="none">Modern Living Room<span class="hero-dot">.</span>
+                        data-splitout="none">Brooklyn Construction<span class="hero-dot">.</span>
                     </div>
 
                     <!-- HERO SUBTITLE -->
@@ -48,8 +48,8 @@
 									"frame":"999",
 									"to":"opacity:0;","ease":"Power3.easeOut"
 								}]'>
-                        The Sedona Theatre is Ireland's largest fixed-seat theatre.<br>It's located in Grand Canal Square,
-                        Dublin.
+                                Fully Insured. Free Estimates
+                                Home Improvement Contractor
                     </div>
 
                     <!-- BUTTON -->
@@ -77,7 +77,7 @@
                 <li data-fstransition="fade" data-transition="fade" data-easein="default" data-easeout="default"
                     data-slotamount="1" data-masterspeed="1200" data-delay="8000" data-title="Astralian Museum">
                     <!-- MAIN IMAGE -->
-                    <img src="{{ asset('frontend') }}/img/revolution/home-1/2.jpg" alt="" data-bgrepeat="no-repeat"
+                    <img src="/img/chandler-denise-Lgaw-BnaAAI-unsplash (1).jpg" alt="" data-bgrepeat="no-repeat"
                         data-bgfit="cover" data-bgparallax="7" class="rev-slidebg">
 
                     <!-- HERO TITLE -->
@@ -97,7 +97,7 @@
 									"frame":"999",
 									"to":"opacity:0;","ease":"Power3.easeOut"
 								}]'
-                        data-splitout="none">Astralian Museum<span class="hero-dot">.</span>
+                        data-splitout="none">Brooklyn Construction<span class="hero-dot">.</span>
                     </div>
 
                     <!-- HERO SUBTITLE -->
@@ -117,8 +117,8 @@
 									"frame":"999",
 									"to":"opacity:0;","ease":"Power3.easeOut"
 								}]'>
-                        The Sedona Theatre is Ireland's largest fixed-seat theatre.<br>It's located in Grand Canal Square,
-                        Dublin.
+                                Fully Insured. Free Estimates
+                                Home Improvement Contractor
                     </div>
 
                     <!-- BUTTON -->
@@ -143,7 +143,7 @@
                 </li> <!-- end slide 1 -->
 
                 <!-- SLIDE 3 -->
-                <li data-fstransition="fade" data-transition="fade" data-easein="default" data-easeout="default"
+                {{-- <li data-fstransition="fade" data-transition="fade" data-easein="default" data-easeout="default"
                     data-slotamount="1" data-masterspeed="1200" data-delay="8000" data-title="Horizon Urban">
                     <!-- MAIN IMAGE -->
                     <img src="{{ asset('frontend') }}/img/revolution/home-1/3.jpg" alt="" data-bgrepeat="no-repeat"
@@ -210,7 +210,7 @@
                         <a href='#' class='btn btn--lg btn--color'>Make Apoinment</a>
                     </div>
 
-                </li> <!-- end slide 1 -->
+                </li> <!-- end slide 1 --> --}}
 
             </ul>
         </div>
