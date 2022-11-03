@@ -51,7 +51,7 @@
     <div class="footer__bottom">
         <div class="container-fluid text-right text-md-center">
             <span class="copyright">
-                &copy; 2018 Sedona, Made by <a href="{{asset('frontend')}}/https://deothemes.com">DeoThemes</a>
+                &copy; 2022 Sedona, {{$site->phone}}
             </span>
         </div>
     </div> <!-- end footer bottom -->
