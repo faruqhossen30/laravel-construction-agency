@@ -38,6 +38,24 @@
           </ul>
         </div>
       </li>
+      {{-- Testmonial --}}
+      <li class="nav-item {{ active_class(['admin/testmonial/*']) }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#testmonial" role="button" aria-expanded="{{ is_active_route(['testmonial/*']) }}" aria-controls="testmonial">
+          <i class="link-icon" data-feather="mail"></i>
+          <span class="link-title">Testmonial</span>
+          <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse {{ show_class(['testmonial/*']) }}" id="testmonial">
+          <ul class="nav sub-menu">
+            <li class="nav-item">
+              <a href="{{ route('testmonial.index') }}" class="nav-link {{ active_class(['admin/testmonial']) }}">All Testmonial</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('testmonial.create') }}" class="nav-link {{ active_class(['admin/testmonial/create']) }}">Add Testmonial</a>
+            </li>
+          </ul>
+        </div>
+      </li>
       <li class="nav-item {{ active_class(['apps/chat']) }}">
         <a href="{{ url('admin/apps/chat') }}" class="nav-link">
           <i class="link-icon" data-feather="message-square"></i>

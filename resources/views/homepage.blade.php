@@ -68,7 +68,7 @@
 										"frame":"999",
 										"to":"opacity:0;","ease":"Power3.easeOut"
 									}]'>
-                        <a href='#' class='btn btn--lg btn--color'>Make Apoinment</a>
+                        <a href='{{route('contactpage')}}' class='btn btn--lg btn--color'>Make Apoinment</a>
                     </div>
 
                 </li> <!-- end slide 1 -->
@@ -137,7 +137,7 @@
 										"frame":"999",
 										"to":"opacity:0;","ease":"Power3.easeOut"
 									}]'>
-                        <a href='#' class='btn btn--lg btn--color'>Make Apoinment</a>
+                        <a href='{{route('contactpage')}}' class='btn btn--lg btn--color'>Make Apoinment</a>
                     </div>
 
                 </li> <!-- end slide 1 -->
@@ -207,7 +207,7 @@
 										"frame":"999",
 										"to":"opacity:0;","ease":"Power3.easeOut"
 									}]'>
-                        <a href='#' class='btn btn--lg btn--color'>Make Apoinment</a>
+                        <a href='{{route('contactpage')}}' class='btn btn--lg btn--color'>Make Apoinment</a>
                     </div>
 
                 </li> <!-- end slide 1 --> --}}
@@ -221,14 +221,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
-                    <h2 class="intro__title">25 years of Experience</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam, eaque
-                        ipsa quae</p>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conse quuntur
-                        magni dolores eos qui
-                        ratione voluptatem sequi nesciunt. Neque porro quisquam qui dolorem ipsum quia dolor sit amet,
-                        consectetur, adipisci velit.</p>
+                    <h2 class="intro__title">About Us</h2>
+                    <p>
+                        An innovative and creative product of its Silicon Valley roots, Brooklyn Construction, Inc. utilizes its general contracting experience and design/build capabilities to meet the needs of each unique project. Ranked as the largest general contractor in Silicon Valley for the majority of the past two decades, this veteran-owned company maintains a notable regional presence in the West. Our team handles projects of all sizes and types for a wide range of owners, developers and end users.
+                    </p>
                     <div class="row mb-lg-48">
                         <div class="col-sm-4">
                             <div class="feature">
@@ -251,7 +247,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <img src="{{ asset('frontend') }}/img/intro/1.jpg" class="img-full-width" alt="">
+                    <img src="{{ asset('/') }}img/tolu-olubode-PlBsJ5MybGc-unsplash.jpg" class="img-full-width" alt="">
                 </div>
             </div>
         </div>
@@ -268,19 +264,23 @@
             <!-- Filter -->
             <div class="masonry-filter">
                 <a href="#" class="filter active" data-filter="*">All</a>
-                <a href="#" class="filter" data-filter=".residential">Residential</a>
+                @foreach ($categories as $category)
+                    <a href="#" class="filter" data-filter=".{{$category->slug}}">{{$category->name}}</a>
+                @endforeach
+                {{-- <a href="#" class="filter" data-filter=".residential">Residential</a>
                 <a href="#" class="filter" data-filter=".commercial">Commercial</a>
                 <a href="#" class="filter" data-filter=".interior">Interior</a>
-                <a href="#" class="filter" data-filter=".landscape">Landscape</a>
+                <a href="#" class="filter" data-filter=".landscape">Landscape</a> --}}
             </div> <!-- end filter -->
 
             <div class="row masonry-grid">
 
-                <div class="masonry-item col-lg-4 project hover-trigger residential">
+                @foreach ($galleries as $gallery)
+                <div class="masonry-item col-lg-4 project hover-trigger {{$gallery->category->slug}}">
                     <div class="project__container">
                         <div class="project__img-holder">
-                            <a href="{{ asset('frontend') }}/portfolio-single.html">
-                                <img src="{{ asset('frontend') }}/img/portfolio/masonry/1.jpg" alt=""
+                            <a href="#">
+                                <img src="{{ asset('uploads/gallery/'.$gallery->name) }}" alt=""
                                     class="project__img">
                                 <div class="hover-overlay">
                                     <div class="project__description">
@@ -291,9 +291,11 @@
                             </a>
                         </div>
                     </div>
-                </div> <!-- end project -->
+                </div>
+                @endforeach
+                 <!-- end project -->
 
-                <div class="masonry-item col-lg-4 project hover-trigger commercial">
+                {{-- <div class="masonry-item col-lg-4 project hover-trigger commercial">
                     <div class="project__container">
                         <div class="project__img-holder">
                             <a href="{{ asset('frontend') }}/portfolio-single.html">
@@ -342,7 +344,7 @@
                             </a>
                         </div>
                     </div>
-                </div> <!-- end project -->
+                </div> <!-- end project --> --}}
 
             </div>
         </div>
@@ -359,50 +361,18 @@
             </div>
 
             <div class="slick-slider slick-testimonials">
-
+                @foreach ($testmonials as $testmonial)
                 <div class="testimonial clearfix">
                     <div class="testimonial__body">
-                        <p class="testimonial__text">“I have witnessed and admired the work for years. I highly recommend
-                            this work for anyone seeking to increase.”</p>
+                        <p class="testimonial__text">“{{$testmonial->text}}”</p>
                     </div>
                     <div class="testimonial__info">
-                        <span class="testimonial__author">Joeby Ragpa</span>
-                        <span class="testimonial__company">DeoThemes</span>
+                        <span class="testimonial__company">By:- {{$testmonial->client_name}}</span>
+                        {{-- <span class="testimonial__company">DeoThemes</span> --}}
                     </div>
                 </div>
+                @endforeach
 
-                <div class="testimonial clearfix">
-                    <div class="testimonial__body">
-                        <p class="testimonial__text">“Every detail has been taken care these team are realy amazing and
-                            talented! I will work only to help your sales goals.”</p>
-                    </div>
-                    <div class="testimonial__info">
-                        <span class="testimonial__author">Alexander Samokhin</span>
-                        <span class="testimonial__company">DeoThemes</span>
-                    </div>
-                </div>
-
-                <div class="testimonial clearfix">
-                    <div class="testimonial__body">
-                        <p class="testimonial__text">“I have witnessed and admired the work for years. I highly recommend
-                            this work for anyone seeking to increase.”</p>
-                    </div>
-                    <div class="testimonial__info">
-                        <span class="testimonial__author">Joeby Ragpa</span>
-                        <span class="testimonial__company">DeoThemes</span>
-                    </div>
-                </div>
-
-                <div class="testimonial clearfix">
-                    <div class="testimonial__body">
-                        <p class="testimonial__text">“Every detail has been taken care these team are realy amazing and
-                            talented! I will work only to help your sales goals.”</p>
-                    </div>
-                    <div class="testimonial__info">
-                        <span class="testimonial__author">Alexander Samokhin</span>
-                        <span class="testimonial__company">DeoThemes</span>
-                    </div>
-                </div>
 
             </div> <!-- end slider -->
 
@@ -410,7 +380,7 @@
     </section> <!-- end testimonials -->
 
     <!-- Partners -->
-    <div class="partners bg-light text-center">
+    {{-- <div class="partners bg-light text-center">
         <div class="container">
             <div class="row">
                 <div class="col-sm-2">
@@ -445,7 +415,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <!-- From Blog -->
     <section class="section-wrap blog-grid">
@@ -463,8 +433,11 @@
                         <div class="call-us mt-auto">
                             <i class="icon-Dispacher-2 call-us__icon"></i>
                             <span class="call-us__title">Call us anytime</span>
-                            <a href="{{ asset('frontend') }}/tel:1-800-995-3959" class="call-us__phone-number">
-                                1-800-995-3959</a>
+                            @if ($site->phone)
+                            <a href="tel:{{$site->phone}}" class="call-us__phone-number">
+                                {{$site->phone}}</a>
+
+                            @endif
                         </div>
                     </div>
                 </div>

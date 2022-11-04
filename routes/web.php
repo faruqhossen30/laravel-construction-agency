@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactpageController;
 use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomepageController::class, 'homePage'])->name('homepage');
-Route::get('/', [HomepageController::class, 'homePage'])->name('homepage');
+Route::get('/contact-us', [ContactpageController::class, 'index'])->name('contactpage');
 Route::get('/test', [HomepageController::class, 'test'])->name('test');
 
 // Route::get('/dashboard', function () {

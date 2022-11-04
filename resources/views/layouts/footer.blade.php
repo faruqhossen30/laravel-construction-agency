@@ -7,7 +7,7 @@
                     <div class="widget widget-about-us">
                         <!-- Logo -->
                         <a href="{{asset('frontend')}}/index.html" class="logo-container flex-child">
-                            <img class="logo" src="{{asset('frontend')}}/img/logo_white.png" srcse{{asset('frontend')}}/t="img/logo_white.png 1x, img/logo_white@2x.png 2x" alt="logo">
+                            <img class="logo" src="{{asset('/')}}/logo.png" srcse{{asset('frontend')}}/t="img/logo_white.png 1x, img/logo_white@2x.png 2x" alt="logo">
                         </a>
                     </div>
                 </div> <!-- end logo -->
@@ -51,7 +51,7 @@
     <div class="footer__bottom">
         <div class="container-fluid text-right text-md-center">
             <span class="copyright">
-                &copy; 2022 Sedona, {{$site->phone}}
+                &copy; 2022 Brooklyn Construction
             </span>
         </div>
     </div> <!-- end footer bottom -->

@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Testmonial extends Model
 {
     use HasFactory;
+    protected $fillable = ['client_name', 'text', 'user_id'];
 }
