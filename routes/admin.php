@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GallerycategoryController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\TestmonialController;
@@ -16,6 +17,7 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function () {
     Route::resource('gallerycategory', GallerycategoryController::class);
     Route::resource('gallery', GalleryController::class);
     Route::resource('testmonial', TestmonialController::class);
+    Route::resource('blog', BlogController::class);
 
     Route::group(['prefix' => 'email'], function () {
         Route::get('inbox', function () {

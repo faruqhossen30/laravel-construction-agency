@@ -56,6 +56,26 @@
           </ul>
         </div>
       </li>
+      {{-- blog --}}
+      <li class="nav-item {{ active_class(['admin/blog/*']) }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#blog" role="button" aria-expanded="{{ is_active_route(['blog/*']) }}" aria-controls="blog">
+          <i class="link-icon" data-feather="mail"></i>
+          <span class="link-title">blog</span>
+          <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse {{ show_class(['blog/*']) }}" id="blog">
+          <ul class="nav sub-menu">
+            <li class="nav-item">
+              <a href="{{ route('blog.index') }}" class="nav-link {{ active_class(['admin/blog']) }}">All blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('blog.create') }}" class="nav-link {{ active_class(['admin/blog/create']) }}">Add blog</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+
       <li class="nav-item {{ active_class(['apps/chat']) }}">
         <a href="{{ url('admin/apps/chat') }}" class="nav-link">
           <i class="link-icon" data-feather="message-square"></i>
