@@ -11,7 +11,7 @@
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <a href="{{route('category.index')}}" type="button" class="btn btn-inverse-primary btn-icon-text">
+                <a href="{{route('testmonial.index')}}" type="button" class="btn btn-inverse-primary btn-icon-text">
                     <i class="btn-icon-prepend" data-feather="list"></i>
                    Category List
                   </a>
@@ -33,17 +33,15 @@
                                     Name
                                 </td>
                                 <td>
-                                    {{$category->name}}
+                                    {{$testmonial->client_name}}
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Photo
+                                   Description
                                 </td>
-                                {{-- <td>
-                                    {{$jobindustry->photo}}
-                                </td> --}}
-                                <td><img src="{{ asset('storage/category/' . $category->thumbnail) }}" alt=""></td>
+
+                                <td>{!!$testmonial->text!!}</td>
 
                             </tr>
                             <tr>
@@ -51,21 +49,21 @@
                                     Author
                                 </td>
                                 <td>
-                                    {{$category->user_id}}
+                                    {{$testmonial->user_id}}
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="my-4">
-                    <a href="{{route('category.edit', $category->id)}}" type="button" class="btn btn-inverse-success btn-icon-text">
+                    <a href="{{route('testmonial.edit', $testmonial->id)}}" type="button" class="btn btn-inverse-success btn-icon-text">
                         <i class="btn-icon-prepend" data-feather="check-square"></i>
                        Edit
                       </a>
-                      <form action="{{route('category.destroy', $category->id)}}" method="post" style="display: inline">
+                      <form action="{{route('testmonial.destroy', $testmonial->id)}}" method="post" style="display: inline">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" onclick="return confirm('Sure ! Delete category ?')"class="btn btn-inverse-danger btn-icon-text">
+                        <button type="submit" onclick="return confirm('Sure ! Delete testmonial ?')"class="btn btn-inverse-danger btn-icon-text">
                             <i class="btn-icon-prepend" data-feather="trash"></i> Delete
                         </button>
                     </form>

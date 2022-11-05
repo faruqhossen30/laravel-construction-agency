@@ -37,10 +37,14 @@
                             </tr>
                         </thead>
                         <tbody>
+
+                            @php
+                                $serial = 1;
+                            @endphp
                             @foreach ($testmonials as $testmonial)
                             <tr>
                                 <td>
-                                    1
+                                    {{ $serial++ }}
                                 </td>
                                 <td>
                                     {{$testmonial->client_name}}
