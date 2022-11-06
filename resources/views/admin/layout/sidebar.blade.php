@@ -74,6 +74,24 @@
           </ul>
         </div>
       </li>
+      {{-- user --}}
+      <li class="nav-item {{ active_class(['admin/usere/*']) }}">
+        <a class="nav-link" data-bs-toggle="collapse" href="#usere" role="button" aria-expanded="{{ is_active_route(['usere/*']) }}" aria-controls="usere">
+          <i class="link-icon" data-feather="mail"></i>
+          <span class="link-title">usere</span>
+          <i class="link-arrow" data-feather="chevron-down"></i>
+        </a>
+        <div class="collapse {{ show_class(['usere/*']) }}" id="usere">
+          <ul class="nav sub-menu">
+            <li class="nav-item">
+              <a href="" class="nav-link {{ active_class(['admin/usere']) }}">All usere</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link {{ active_class(['admin/usere/create']) }}">Add usere</a>
+            </li>
+          </ul>
+        </div>
+      </li>
       {{-- settings --}}
       <li class="nav-item {{ active_class(['apps/setting']) }}">
         <a href="{{ route('setting') }}" class="nav-link">
