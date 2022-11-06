@@ -74,12 +74,11 @@
           </ul>
         </div>
       </li>
-
-
-      <li class="nav-item {{ active_class(['apps/chat']) }}">
-        <a href="{{ url('admin/apps/chat') }}" class="nav-link">
+      {{-- settings --}}
+      <li class="nav-item {{ active_class(['apps/setting']) }}">
+        <a href="{{ route('setting') }}" class="nav-link">
           <i class="link-icon" data-feather="message-square"></i>
-          <span class="link-title">Chat</span>
+          <span class="link-title">setting</span>
         </a>
       </li>
       <li class="nav-item {{ active_class(['apps/calendar']) }}">
