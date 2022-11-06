@@ -6,6 +6,7 @@ use App\Models\Testmonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class TestmonialController extends Controller
 {
@@ -64,7 +65,8 @@ class TestmonialController extends Controller
      */
     public function show($id)
     {
-        //
+         $testmonial = Testmonial::firstWhere('id',$id);
+         return view('admin.testmonial.show', compact('testmonial'));
     }
 
     /**
@@ -75,6 +77,9 @@ class TestmonialController extends Controller
      */
     public function edit($id)
     {
+
+        $testmonial = Testmonial::firstWhere('id',$id);
+        return view('admin.testmonial.edit', compact('testmonial'));
         //
     }
 
@@ -87,7 +92,20 @@ class TestmonialController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $request->validate([
+            'client_name' => 'required',
+            'text'        => 'required',
+         ]);
+
+
+         $data = [
+          'client_name' => $request->client_name,
+          'text'        => $request->text,
+          'user_id'     => Auth::user()->id
+         ];
+         Testmonial::firstWhere('id',$id)->update($data);
+         Session::flash('update');
+         return redirect()->route('testmonial.index');
     }
 
     /**
@@ -98,6 +116,9 @@ class TestmonialController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+         Testmonial ::firstwhere('id', $id)->delete();
+         Session::flash('delete');
+         return redirect()->route('testmonial.index');
     }
 }

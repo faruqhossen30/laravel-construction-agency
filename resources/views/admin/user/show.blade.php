@@ -2,7 +2,7 @@
 @section('content')
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Category</a></li>
+        <li class="breadcrumb-item"><a href="#">Blog</a></li>
         <li class="breadcrumb-item active" aria-current="page">Show</li>
     </ol>
 </nav>
@@ -11,9 +11,9 @@
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <a href="{{route('testmonial.index')}}" type="button" class="btn btn-inverse-primary btn-icon-text">
+                <a href="{{route('blog.index')}}" type="button" class="btn btn-inverse-primary btn-icon-text">
                     <i class="btn-icon-prepend" data-feather="list"></i>
-                   Category List
+                    Blog List
                   </a>
                 <div class="table-responsive pt-3">
                     <table class="table table-bordered">
@@ -23,47 +23,32 @@
                                     Name
                                 </th>
                                 <th>
-                                    Description
+                                   {{$user->name}}
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
-                                    Name
+                                    Email
                                 </td>
                                 <td>
-                                    {{$testmonial->client_name}}
+                                    {{$user->email}}
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                   Description
-                                </td>
 
-                                <td>{!!$testmonial->text!!}</td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    Author
-                                </td>
-                                <td>
-                                    {{$testmonial->user_id}}
-                                </td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="my-4">
-                    <a href="{{route('testmonial.edit', $testmonial->id)}}" type="button" class="btn btn-inverse-success btn-icon-text">
+                    <a href="{{route('user.edit', $user->id)}}" type="button" class="btn btn-inverse-success btn-icon-text">
                         <i class="btn-icon-prepend" data-feather="check-square"></i>
                        Edit
                       </a>
-                      <form action="{{route('testmonial.destroy', $testmonial->id)}}" method="post" style="display: inline">
+                      <form action="{{route('user.destroy', $user->id)}}" method="post" style="display: inline">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" onclick="return confirm('Sure ! Delete testmonial ?')"class="btn btn-inverse-danger btn-icon-text">
+                        <button type="submit" onclick="return confirm('Sure ! Delete user ?')"class="btn btn-inverse-danger btn-icon-text">
                             <i class="btn-icon-prepend" data-feather="trash"></i> Delete
                         </button>
                     </form>
@@ -101,9 +86,8 @@
     })
     Toast.fire({
         icon: 'success'
-        , title: 'Category has been created Successfully!'
+        , title: 'Blog has been created Successfully!'
     })
-
 </script>
 @endif
 @endpush

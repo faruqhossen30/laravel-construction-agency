@@ -2,7 +2,7 @@
 @section('content')
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Category</a></li>
+        <li class="breadcrumb-item"><a href="#">Blog</a></li>
         <li class="breadcrumb-item active" aria-current="page">List</li>
     </ol>
 </nav>
@@ -11,62 +11,61 @@
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <a href="{{route('testmonial.create')}}" type="button" class="btn btn-inverse-primary btn-icon-text">
+                <a href="{{route('blog.create')}}" type="button" class="btn btn-inverse-primary btn-icon-text">
                     <i class="btn-icon-prepend" data-feather="plus-circle"></i>
                     Create
                 </a>
                 <div class="table-responsive pt-3">
-                    <table class="table table-bordered table-responsive">
+                    <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th scope="col" style="max-width: 20%">
+                                <th>
                                     #
                                 </th>
-                                <th scope="col" style="max-width: 20%">
-                                    Client Name
+                                <th>
+                                    Title
                                 </th>
-                                <th scope="col" style="max-width: 20%">
-                                    Text
+                                <th>
+                                    Description
                                 </th>
-                                <th scope="col" style="max-width: 20%">
-                                    Create at
+                                <th>
+                                   Image
                                 </th>
-                                <th scope="col" style="max-width: 20%">
+                                <th>
                                     Action
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
-
                             @php
-                                $serial = 1;
+                                $serial=1;
                             @endphp
-                            @foreach ($testmonials as $testmonial)
+                            @foreach ($blogs as $blog)
                             <tr>
                                 <td>
-                                    {{ $serial++ }}
+                                {{ $serial++ }}
                                 </td>
                                 <td>
-                                    {{$testmonial->client_name}}
+                                    {{$blog->title}}
                                 </td>
                                 <td>
-                                    {{$testmonial->text}}
+                                    {!! $blog->description !!}
                                 </td>
                                 <td>
-                                    {{$testmonial->created_at->format('d M Y')}}
+                                 <img src="{{ asset('admin/uploads/blog/' . $blog->blog_image)}}" alt="" style="width: 100px; height:100px">
                                 </td>
                                 <td>
-                                    <form action="{{route('testmonial.destroy', $testmonial->id)}}" method="post" style="display: inline">
+                                    <form action="{{route('blog.destroy', $blog->id)}}" method="post" style="display: inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" onclick="return confirm('Sure ! Delete category ?')" class="btn btn-danger btn-xs btn-icon">
+                                        <button type="submit" onclick="return confirm('Sure ! Delete blog ?')" class="btn btn-danger btn-xs btn-icon">
                                             <i data-feather="trash"></i>
                                         </button>
                                     </form>
-                                    <a href="{{route('testmonial.edit', $testmonial->id)}}" type="button" class="btn btn-warning btn-xs btn-icon">
+                                    <a href="{{route('blog.edit', $blog->id)}}" type="button" class="btn btn-warning btn-xs btn-icon">
                                         <i data-feather="check-square"></i>
                                     </a>
-                                    <a href="{{route('testmonial.show', $testmonial->id)}}" type="button" class="btn btn-success btn-xs btn-icon">
+                                    <a href="{{route('blog.show', $blog->id)}}" type="button" class="btn btn-success btn-xs btn-icon">
                                         <i data-feather="eye"></i>
                                     </a>
 
@@ -113,9 +112,8 @@
     })
     Toast.fire({
         icon: 'success'
-        , title: 'Category has been created!'
+        , title: 'Blog has been created!'
     })
-
 </script>
 @endif
 @if (Session::has('update'))
@@ -133,9 +131,8 @@
     })
     Toast.fire({
         icon: 'success'
-        , title: 'Category has been updated !'
+        , title: 'Blog has been updated !'
     })
-
 </script>
 @endif
 @if (Session::has('delete'))
@@ -153,9 +150,8 @@
     })
     Toast.fire({
         icon: 'warning'
-        , title: 'Category has been deleted !'
+        , title: 'Blog has been deleted !'
     })
-
 </script>
 @endif
 @endpush

@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GallerycategoryController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\TestmonialController;
+use App\Http\Controllers\UserController;
 use App\Models\GalleryCategory;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +19,12 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function () {
     Route::resource('gallerycategory', GallerycategoryController::class);
     Route::resource('gallery', GalleryController::class);
     Route::resource('testmonial', TestmonialController::class);
+    Route::resource('blog', BlogController::class);
+    Route::resource('user', UserController::class);
+    // Settings
+    Route::get('setting', [SiteController::class, 'showSetting'])->name('setting');
+    Route::post('setting/information', [SiteController::class, 'settingsInformation'])->name('setting.Information');
+
 
     Route::group(['prefix' => 'email'], function () {
         Route::get('inbox', function () {
