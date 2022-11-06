@@ -60,16 +60,16 @@
       <li class="nav-item {{ active_class(['admin/blog/*']) }}">
         <a class="nav-link" data-bs-toggle="collapse" href="#blog" role="button" aria-expanded="{{ is_active_route(['blog/*']) }}" aria-controls="blog">
           <i class="link-icon" data-feather="mail"></i>
-          <span class="link-title">blog</span>
+          <span class="link-title">Blog</span>
           <i class="link-arrow" data-feather="chevron-down"></i>
         </a>
         <div class="collapse {{ show_class(['blog/*']) }}" id="blog">
           <ul class="nav sub-menu">
             <li class="nav-item">
-              <a href="{{ route('blog.index') }}" class="nav-link {{ active_class(['admin/blog']) }}">All blog</a>
+              <a href="{{ route('blog.index') }}" class="nav-link {{ active_class(['admin/blog']) }}">All Blog</a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('blog.create') }}" class="nav-link {{ active_class(['admin/blog/create']) }}">Add blog</a>
+              <a href="{{ route('blog.create') }}" class="nav-link {{ active_class(['admin/blog/create']) }}">Add Blog</a>
             </li>
           </ul>
         </div>
@@ -78,16 +78,16 @@
       <li class="nav-item {{ active_class(['admin/usere/*']) }}">
         <a class="nav-link" data-bs-toggle="collapse" href="#usere" role="button" aria-expanded="{{ is_active_route(['usere/*']) }}" aria-controls="usere">
           <i class="link-icon" data-feather="mail"></i>
-          <span class="link-title">usere</span>
+          <span class="link-title">Users</span>
           <i class="link-arrow" data-feather="chevron-down"></i>
         </a>
         <div class="collapse {{ show_class(['usere/*']) }}" id="usere">
           <ul class="nav sub-menu">
             <li class="nav-item">
-              <a href="" class="nav-link {{ active_class(['admin/usere']) }}">All usere</a>
+              <a href="{{ route('user.index') }}" class="nav-link {{ active_class(['admin/usere']) }}">All User</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link {{ active_class(['admin/usere/create']) }}">Add usere</a>
+              <a href="{{ route('user.create') }}" class="nav-link {{ active_class(['admin/usere/create']) }}">Add User</a>
             </li>
           </ul>
         </div>
@@ -96,7 +96,7 @@
       <li class="nav-item {{ active_class(['apps/setting']) }}">
         <a href="{{ route('setting') }}" class="nav-link">
           <i class="link-icon" data-feather="message-square"></i>
-          <span class="link-title">setting</span>
+          <span class="link-title">Setting</span>
         </a>
       </li>
       <li class="nav-item {{ active_class(['apps/calendar']) }}">

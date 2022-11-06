@@ -2,7 +2,7 @@
 @section('content')
 <nav class="page-breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Category</a></li>
+        <li class="breadcrumb-item"><a href="#">Testmonial</a></li>
         <li class="breadcrumb-item active" aria-current="page">List</li>
     </ol>
 </nav>

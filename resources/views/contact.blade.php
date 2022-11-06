@@ -54,7 +54,8 @@
                     <h2 class="section-title">Get a Free Quote</h2>
                     <p class="mb-40">If you have any question about project cost, get in touch.</p>
                     <!-- Contact Form -->
-                    <form id="contact-form" class="contact-form material" method="post" action="#">
+                    <form id="contact-form" class="contact-form material" method="post" action="{{ route('contact.send')}}">
+                        @csrf
 
                         <div class="row">
                             <div class="col-lg-6">
@@ -90,7 +91,7 @@
                         </div>
 
                         <div class="material__form-group form-group">
-                            <textarea id="message" name="message" rows="7" class="form-input material__input" required=""></textarea>
+                            <textarea id="message" name="massage" rows="7" class="form-input material__input" required=""></textarea>
                             <label for="message" class="material__label">Message
                                 <abbr title="required" class="required">*</abbr>
                             </label>

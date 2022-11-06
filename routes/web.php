@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ContactpageController;
-use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\ContactpageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::get('/test', [HomepageController::class, 'test'])->name('test');
 // })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+// contact us
+Route::get('/contact',[ContactController::class, 'contactMail'])->name('contact-us');
+Route::post('/send-message',[ContactController::class, 'sendMail'])->name('contact.send');

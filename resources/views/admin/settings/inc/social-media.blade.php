@@ -1,22 +1,32 @@
 
 
-
- <div class="row">
-      <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-              <div class="card-body">
-                  <p>facebook</p>
-              </div>
-          </div>
-      </div>
+  <div class="row">
       <div class="col-md-9 grid-margin stretch-card">
           <div class="card">
               <div class="card-body">
-                  <div class="input-group date timepicker" id="datetimepickerExample" data-target-input="nearest">
-                      <span class="input-group-text" data-target="#datetimepickerExample"
-                          data-toggle="datetimepicker"><i data-feather="clock"></i></span>
-                      <input type="text" name="facebook" value="{{  $settings->facebook ?? 'no data' }}" class="form-control datetimepicker-input"
-                          data-target="#datetimepickerExample" />
+
+                  <div class="input-group date timepicker" id="facebook" data-target-input="nearest">
+                      <span class="input-group-text" data-target="#facebook"
+                          data-toggle="datetimepicker"><i data-feather="facebook"></i></span>
+                      <input type="text" name="facebook" value="{{  $settings->facebook ?? 'no data' }}"class="form-control datetimepicker-input"
+                          data-target="#facebook" />
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-9 grid-margin stretch-card">
+          <div class="card">
+              <div class="card-body">
+
+                  <div class="input-group date timepicker" id="facebookgroup" data-target-input="nearest">
+                      <span class="input-group-text" data-target="#facebookgroup"
+                          data-toggle="datetimepicker"><i data-feather="facebook"></i></span>
+                      <input type="text" name="facebook_group" value="{{  $settings->facebook_group ?? 'no data' }}"class="form-control datetimepicker-input"
+                          data-target="#facebookgroup" />
 
                   </div>
               </div>
@@ -24,49 +34,15 @@
       </div>
   </div>
   <div class="row">
-
-
-      <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-              <div class="card-body">
-                  <p> facebook_group</p>
-              </div>
-          </div>
-      </div>
       <div class="col-md-9 grid-margin stretch-card">
           <div class="card">
               <div class="card-body">
 
-                  <div class="input-group date timepicker" id="datetimepickerExample" data-target-input="nearest">
-                      <span class="input-group-text" data-target="#datetimepickerExample"
-                          data-toggle="datetimepicker"><i data-feather="clock"></i></span>
-                      <input type="text" name="facebook_group" value="{{  $settings->facebook ?? 'no data' }}"class="form-control datetimepicker-input"
-                          data-target="#datetimepickerExample" />
-
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-
-
-      <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-              <div class="card-body">
-                  <p>twitter</p>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-9 grid-margin stretch-card">
-          <div class="card">
-              <div class="card-body">
-
-                  <div class="input-group date timepicker" id="datetimepickerExample" data-target-input="nearest">
-                      <span class="input-group-text" data-target="#datetimepickerExample"
-                          data-toggle="datetimepicker"><i data-feather="clock"></i></span>
+                  <div class="input-group date timepicker" id="twiter" data-target-input="nearest">
+                      <span class="input-group-text" data-target="#twiter"
+                          data-toggle="datetimepicker"><i data-feather="twitter"></i></span>
                       <input type="text" name="twitter" value="{{  $settings->twitter ?? 'no data' }}" class="form-control datetimepicker-input"
-                          data-target="#datetimepickerExample" />
+                          data-target="#twiter" />
 
                   </div>
               </div>
@@ -74,24 +50,15 @@
       </div>
   </div>
   <div class="row">
-
-
-      <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-              <div class="card-body">
-                  <p> linkedin</p>
-              </div>
-          </div>
-      </div>
       <div class="col-md-9 grid-margin stretch-card">
           <div class="card">
               <div class="card-body">
 
-                  <div class="input-group date timepicker" id="datetimepickerExample" data-target-input="nearest">
-                      <span class="input-group-text" data-target="#datetimepickerExample"
-                          data-toggle="datetimepicker"><i data-feather="clock"></i></span>
+                  <div class="input-group date timepicker" id="linkedin" data-target-input="nearest">
+                      <span class="input-group-text" data-target="#linkedin"
+                          data-toggle="datetimepicker"><i data-feather="linkedin"></i></span>
                       <input type="text" name="linkedin" value="{{  $settings->linkedin ?? 'no data' }}" class="form-control datetimepicker-input"
-                          data-target="#datetimepickerExample" />
+                          data-target="#linkedin" />
 
                   </div>
               </div>
@@ -99,24 +66,15 @@
       </div>
   </div>
   <div class="row">
-
-
-      <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-              <div class="card-body">
-                  <p> instagram</p>
-              </div>
-          </div>
-      </div>
       <div class="col-md-9 grid-margin stretch-card">
           <div class="card">
               <div class="card-body">
 
-                  <div class="input-group date timepicker" id="datetimepickerExample" data-target-input="nearest">
-                      <span class="input-group-text" data-target="#datetimepickerExample"
-                          data-toggle="datetimepicker"><i data-feather="clock"></i></span>
+                  <div class="input-group date timepicker" id="instgram" data-target-input="nearest">
+                      <span class="input-group-text" data-target="#instgram"
+                          data-toggle="datetimepicker"><i data-feather="instagram"></i></span>
                       <input type="text" name="instagram" value="{{  $settings->instagram ?? 'no data' }}" class="form-control datetimepicker-input"
-                          data-target="#datetimepickerExample" />
+                          data-target="#instgram" />
 
                   </div>
               </div>
@@ -124,24 +82,15 @@
       </div>
   </div>
   <div class="row">
-
-
-      <div class="col-md-3 grid-margin stretch-card">
-          <div class="card">
-              <div class="card-body">
-                  <p> youtube</p>
-              </div>
-          </div>
-      </div>
       <div class="col-md-9 grid-margin stretch-card">
           <div class="card">
               <div class="card-body">
 
-                  <div class="input-group date timepicker" id="datetimepickerExample" data-target-input="nearest">
-                      <span class="input-group-text" data-target="#datetimepickerExample"
-                          data-toggle="datetimepicker"><i data-feather="clock"></i></span>
+                  <div class="input-group date timepicker" id="youtube" data-target-input="nearest">
+                      <span class="input-group-text" data-target="#youtube"
+                          data-toggle="datetimepicker"><i data-feather="youtube"></i></span>
                       <input type="text" name="youtube" value="{{  $settings->youtube ?? 'no data' }}"class="form-control datetimepicker-input"
-                          data-target="#datetimepickerExample" />
+                          data-target="#youtube" />
 
                   </div>
               </div>
