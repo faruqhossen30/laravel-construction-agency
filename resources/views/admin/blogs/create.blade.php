@@ -37,7 +37,7 @@
                         {{-- Thumbnail --}}
                         <div class="card">
                             <div class="card-body">
-                                <h6 class="card-title">Thanbnail</h6>
+                                <h6 class="card-title">Thumbnail</h6>
                                 <p class="text-muted mb-3">Drag and Drop your image. </p>
                                 <input type="file" id="myDropify" name="blog_image">
                             </div>
