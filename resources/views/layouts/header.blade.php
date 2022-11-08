@@ -27,7 +27,7 @@
                             <a href="{{ route('homepage') }}" aria-haspopup="true">Home</a>
                         </li>
                         <li class="nav__dropdown active">
-                            <a href="{{ route('homepage') }}" aria-haspopup="true">About Us</a>
+                            <a href="{{ route('aboutus') }}" aria-haspopup="true">About Us</a>
                         </li>
                         <li class="nav__dropdown active">
                             <a href="{{ route('contactpage') }}" aria-haspopup="true">Contact Now</a>
@@ -43,13 +43,14 @@
 
                     <div class="nav__socials nav__socials--mobile d-lg-none">
                         <div class="socials">
-                            <a href="#" class="social social-twitter" aria-label="twitter" title="twitter"
+                            <a href="{{ $site->twitter }}" class="social social-twitter" aria-label="twitter" title="twitter"
                                 target="_blank"><i class="ui-twitter"></i></a>
-                            <a href="#" class="social social-facebook" aria-label="facebook" title="facebook"
+
+                            <a href="{{ $site->facebook }}" class="social social-facebook" aria-label="facebook" title="facebook"
                                 target="_blank"><i class="ui-facebook"></i></a>
-                            <a href="#" class="social social-youtube" aria-label="youtube" title="google plus"
+                            <a href="{{ $site->youtube }}" class="social social-youtube" aria-label="youtube" title="google plus"
                                 target="_blank"><i class="ui-youtube"></i></a>
-                            <a href="#" class="social social-instagram" aria-label="instagram" title="instagram"
+                            <a href="{{ $site->instagram }}" class="social social-instagram" aria-label="instagram" title="instagram"
                                 target="_blank"><i class="ui-instagram"></i></a>
                         </div>
                     </div>
@@ -63,13 +64,13 @@
 
                 <div class="nav__socials d-none d-lg-block">
                     <div class="socials">
-                        <a href="#" class="social social-twitter" aria-label="twitter" title="twitter"
+                        <a href="{{ $site->twitter }}" class="social social-twitter" aria-label="twitter" title="twitter"
                             target="_blank"><i class="ui-twitter"></i></a>
-                        <a href="#" class="social social-facebook" aria-label="facebook" title="facebook"
+                        <a href="{{ $site->facebook }}" class="social social-facebook" aria-label="facebook" title="facebook"
                             target="_blank"><i class="ui-facebook"></i></a>
-                        <a href="#" class="social social-youtube" aria-label="youtube" title="google plus"
+                        <a href="{{ $site->youtube }}" class="social social-youtube" aria-label="youtube" title="google plus"
                             target="_blank"><i class="ui-youtube"></i></a>
-                        <a href="#" class="social social-instagram" aria-label="instagram" title="instagram"
+                        <a href="{{ $site->instagram }}" class="social social-instagram" aria-label="instagram" title="instagram"
                             target="_blank"><i class="ui-instagram"></i></a>
                     </div>
                 </div>

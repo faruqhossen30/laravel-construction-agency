@@ -28,3 +28,5 @@ require __DIR__.'/auth.php';
 // contact us
 Route::get('/contact',[ContactController::class, 'contactMail'])->name('contact-us');
 Route::post('/send-message',[ContactController::class, 'sendMail'])->name('contact.send');
+
+Route::get('/about-us',[ContactController::class, 'aboutUs'])->name('aboutus');

@@ -22,8 +22,8 @@ Route::group(['prefix' => 'admin', 'middleware'=> 'auth'], function () {
     Route::resource('blog', BlogController::class);
     Route::resource('user', UserController::class);
     // Settings
-    Route::get('setting', [SiteController::class, 'showSetting'])->name('setting');
-    Route::post('setting/information', [SiteController::class, 'settingsInformation'])->name('setting.Information');
+    Route::get('site', [SiteController::class, 'showsite'])->name('site');
+    Route::post('site/store', [SiteController::class, 'sitestore'])->name('site.store');
 
 
     Route::group(['prefix' => 'email'], function () {

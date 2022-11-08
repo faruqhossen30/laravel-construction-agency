@@ -21,6 +21,7 @@
 	<link rel="apple-touch-icon" href="{{asset('frontend')}}/img/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="{{asset('frontend')}}/img/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="{{asset('frontend')}}/img/apple-touch-icon-114x114.png">
+	
 </head>
 <body>
 	<!-- Preloader -->
@@ -66,6 +67,8 @@
 	<script src="{{asset('frontend')}}/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
 	<script src="{{asset('frontend')}}/revolution/js/extensions/revolution.extension.migration.min.js"></script>
 	<script src="{{asset('frontend')}}/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+	
 
 </body>
 </html>
