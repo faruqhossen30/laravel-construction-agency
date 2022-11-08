@@ -3,34 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Models\Settings;
+use App\Models\Site;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
-    public function showSetting(){
-         $settings = Settings::first();
-         return view('admin.settings.setting',compact('settings'));
+    public function showsite()
+    {
+        $site = Site::first();
+        return view('admin.settings.setting', compact('site'));
     }
-    public function settingsInformation(Request $request){
-
-           $request->validate([
-           'email' => 'email'
-           ]);
-        Settings::updateOrInsert([
-        'id' => 1
-        ], [
-        'facebook'       => $request->facebook,
-        'facebook_group' => $request->facebook_group,
-        'twitter'        => $request->twitter,
-        'instagram'      => $request->instagram,
-        'youtube'        => $request->youtube,
-        'linkedin'       => $request->linkedin,
-        'phone'          => $request->phone,
-        'mobile'         => $request->mobile,
-        'email'          => $request->email,
-        'address'        => $request->address,
-        'mobile_alt'     => $request->mobile_alt,
+    public function sitestore(Request $request)
+    {
+        // return $request->all();
+        $request->validate([
+            'email' => 'email'
         ]);
-     return redirect()->back();
+
+        Site::first()->update(
+            [
+
+                'logo'      => $request->logo,
+                'mobile'    => $request->mobile,
+                'email'     => $request->email,
+                'phone'     => $request->phone,
+                'phone2'    => $request->phone2,
+                'address'   => $request->address,
+                'facebook'  => $request->facebook,
+                'twitter'   => $request->twitter,
+                'whatsapp'  => $request->whatsapp,
+                'address'   => $request->address,
+                'linkedin'  => $request->linkedin,
+                'instagram' => $request->instagram,
+                'youtube'   => $request->youtube,
+                'map'       => $request->map,
+            ]
+        );
+        return redirect()->back();
     }
 }

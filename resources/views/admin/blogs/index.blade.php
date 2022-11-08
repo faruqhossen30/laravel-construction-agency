@@ -15,57 +15,50 @@
                     <i class="btn-icon-prepend" data-feather="plus-circle"></i>
                     Create
                 </a>
-                <div class="table-responsive pt-3">
+                <div class="pt-3">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>
-                                    #
-                                </th>
-                                <th>
-                                    Title
-                                </th>
-                                <th>
-                                    Description
-                                </th>
-                                <th>
-                                   Image
-                                </th>
-                                <th>
-                                    Action
-                                </th>
+                                <th> # </th>
+                                <th> Title </th>
+                                
+                                <th> Image </th>
+                                <th> Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @php
-                                $serial=1;
+                            $serial=1;
                             @endphp
                             @foreach ($blogs as $blog)
                             <tr>
                                 <td>
-                                {{ $serial++ }}
+                                    {{ $serial++ }}
                                 </td>
                                 <td>
                                     {{$blog->title}}
                                 </td>
+                                
                                 <td>
-                                    {!! $blog->description !!}
+                                    <img src="{{ asset('admin/uploads/blog/' . $blog->blog_image)}}" alt=""
+                                        style="height: 70px; width:70px;" />
                                 </td>
                                 <td>
-                                 <img src="{{ asset('admin/uploads/blog/' . $blog->blog_image)}}" alt="" style="width: 100px; height:100px">
-                                </td>
-                                <td>
-                                    <form action="{{route('blog.destroy', $blog->id)}}" method="post" style="display: inline">
+                                    <form action="{{route('blog.destroy', $blog->id)}}" method="post"
+                                        style="display: inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" onclick="return confirm('Sure ! Delete blog ?')" class="btn btn-danger btn-xs btn-icon">
+                                        <button type="submit" onclick="return confirm('Sure ! Delete blog ?')"
+                                            class="btn btn-danger btn-xs btn-icon">
                                             <i data-feather="trash"></i>
                                         </button>
                                     </form>
-                                    <a href="{{route('blog.edit', $blog->id)}}" type="button" class="btn btn-warning btn-xs btn-icon">
+                                    <a href="{{route('blog.edit', $blog->id)}}" type="button"
+                                        class="btn btn-warning btn-xs btn-icon">
                                         <i data-feather="check-square"></i>
                                     </a>
-                                    <a href="{{route('blog.show', $blog->id)}}" type="button" class="btn btn-success btn-xs btn-icon">
+                                    <a href="{{route('blog.show', $blog->id)}}" type="button"
+                                        class="btn btn-success btn-xs btn-icon">
                                         <i data-feather="eye"></i>
                                     </a>
 

@@ -8,5 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Site extends Model
 {
     use HasFactory;
-    protected $fillable = ['logo', 'mobile', 'email', 'phone', 'phone2', 'address', 'facebook', 'twitter', 'whatsapp', 'linkedin', 'instagram'];
+    protected $fillable =
+    [
+        'logo',
+        'mobile',
+        'email',
+        'phone',
+        'phone2',
+        'address',
+        'facebook',
+        'twitter',
+        'whatsapp',
+        'linkedin',
+        'instagram',
+        'youtube',
+        'map'
+    ];
 }
