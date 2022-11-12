@@ -112,7 +112,7 @@
 
     <div id="google-map" class="gmap" data-address="V Tytana St, Manila, Philippines">
 
-        <iframe src="{{$site->map}}" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      {!!$site->map!!}
     </div>
 </section>
 

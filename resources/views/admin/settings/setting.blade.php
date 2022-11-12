@@ -15,8 +15,8 @@
                 aria-controls="v-map" aria-selected="false"><span class="input-group"><i data-feather="home" class="me-2"></i>Contact</a>
             <a class="nav-link " id="v-map-tab" data-bs-toggle="tab" href="#v-map" role="tab"
                 aria-controls="v-profile" aria-selected="false"><span class="input-group"><i data-feather="map" class="me-2"></i>Map</a>
-            <a class="nav-link " id="v-logo-tab" data-bs-toggle="tab" href="#v-logo" role="tab"
-                aria-controls="v-logo" aria-selected="false"><span class="input-group"><i data-feather="aperture" class="me-2"></i>logo</a>
+            {{-- <a class="nav-link " id="v-logo-tab" data-bs-toggle="tab" href="#v-logo" role="tab"
+                aria-controls="v-logo" aria-selected="false"><span class="input-group"><i data-feather="aperture" class="me-2"></i>logo</a> --}}
             {{-- <a class="nav-link" id="v-messages-tab" data-bs-toggle="tab" href="#v-messages" role="tab"
                 aria-controls="v-messages" aria-selected="false">Messages</a>
             <a class="nav-link" id="v-settings-tab" data-bs-toggle="tab" href="#v-settings" role="tab"
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="v-logo" role="tabpanel" aria-labelledby="v-logo-tab">
+                {{-- <div class="tab-pane fade" id="v-logo" role="tabpanel" aria-labelledby="v-logo-tab">
                     <div class="row">
                         <div class="col-md-9 grid-margin stretch-card">
                             <div class="card">
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <div class="tab-pane fade" id="v-map" role="tabpanel" aria-labelledby="v-map-tab">
                     <div class="row">
                         <div class="col-md-9 grid-margin stretch-card">
