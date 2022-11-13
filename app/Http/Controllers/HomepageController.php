@@ -18,7 +18,7 @@ class HomepageController extends Controller
         $galleries   = Gallery::with('category')->get();
         $categories  = GalleryCategory::get();
         $testmonials = Testmonial::get();
-        $blogs       = Blog::latest()->get();
+        $blogs       = Blog::latest()->take(5)->get();
 
         $latest1     = collect($blogs)->slice(0, 2);
         $latest2     = collect($blogs)->slice(-3, 3);
@@ -26,7 +26,7 @@ class HomepageController extends Controller
         // return $latest1;
 
         // return $blogs;
-        return view('homepage', compact('galleries', 'categories', 'latest1', 'latest2', 'testmonials'));
+        return view('homepage', compact('galleries', 'categories', 'blogs', 'latest1', 'latest2', 'testmonials'));
     }
     public function test()
     {

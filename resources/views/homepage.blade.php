@@ -247,7 +247,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <img src="{{ asset('/') }}img/tolu-olubode-PlBsJ5MybGc-unsplash.jpg" class="img-full-width"
+                    <img src="{{ asset('/') }}img/building.jpg" class="img-full-width"
                         alt="">
                 </div>
             </div>
@@ -441,94 +441,62 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-7 offset-lg-1">
                     <div class="from-blog">
-                        <div class="row row-60">
-                            @foreach ($latest1 as $blog)
-                                <div class="col-lg-6">
-                                    <article class="entry">
-                                        <div class="entry__img-holder">
-                                            <a href="{{ asset('frontend') }}/single-post.html">
-                                                <img src="{{ asset('admin/uploads/blog/' . $blog->blog_image) }}"
-                                                    class="entry__img" alt="{{ $blog->title }}" style="height: 200px;">
-                                            </a>
-                                        </div>
-                                        <div class="entry__body">
-                                            <ul class="entry__meta">
-                                                <li class="entry__meta-date">
-                                                    <span>{{ $blog->created_at->format('d M Y') }}</span>
-                                                </li>
-                                            </ul>
-                                            <h4 class="entry__title">
-                                                <a
-                                                    href="{{ asset('frontend') }}/single-post.html">{!! $blog->title !!}</a>
-                                            </h4>
-                                        </div>
-                                    </article>
-                                </div>
-                            @endforeach
+                        {{-- <div class="row row-60">
+                            <div class="col-lg-6">
+                                <article class="entry">
+                                    <div class="entry__img-holder">
+                                        <a href="single-post.html">
+                                            <img src="img/blog/from_blog_1.jpg" class="entry__img" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="entry__body">
+                                        <ul class="entry__meta">
+                                            <li class="entry__meta-date">
+                                                <span>15 November 2018</span>
+                                            </li>
+                                        </ul>
+                                        <h4 class="entry__title">
+                                            <a href="single-post.html">Best buildings of 2018 revealed at day one of World Architecture Festival 2018.</a>
+                                        </h4>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-lg-6">
+                                <article class="entry">
+                                    <div class="entry__img-holder">
+                                        <a href="single-post.html">
+                                            <img src="img/blog/from_blog_2.jpg" class="entry__img" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="entry__body">
+                                        <ul class="entry__meta">
+                                            <li class="entry__meta-date">
+                                                <span>15 November 2018</span>
+                                            </li>
+                                        </ul>
+                                        <h4 class="entry__title">
+                                            <a href="single-post.html">Sunken washroom by Studio 304 allows residents to bathe in a garden setting.</a>
+                                        </h4>
+                                    </div>
+                                </article>
+                            </div>
+                        </div> --}}
+                        <div class="from-blog__recent-posts">
+                            <ul class="from-blog__recent-posts-list">
+                                @php
+                                    $serial = 1;
+                                @endphp
+                                @foreach ($blogs as $blog)
+                                <li class="from-blog__recent-posts-item">
+                                    <span class="from-blog__post-number">{{$serial++;}}</span>
+                                    <a href="#" class="from-blog__post-url">{{$blog->title}}</a>
+                                </li>
+                                @endforeach
+                            </ul>
                         </div>
-
                     </div>
-                </div>
-
-                <div class="row row-60">
-                    @foreach ($latest2 as $blog)
-                        <div class="col-lg-4">
-                            <article class="entry">
-                                <div class="entry__img-holder">
-                                    <a href="{{ asset('frontend') }}/single-post.html">
-                                        <img src="{{ asset('admin/uploads/blog/' . $blog->blog_image) }}"
-                                            class="entry__img" alt="{{ $blog->title }}" style="height: 200px;">
-                                    </a>
-                                </div>
-                                <div class="entry__body">
-                                    <ul class="entry__meta">
-                                        <li class="entry__meta-date">
-                                            <span>{{ $blog->created_at->format('d M Y') }}</span>
-                                        </li>
-                                    </ul>
-                                    <h4 class="entry__title">
-                                        <a href="{{ asset('frontend') }}/single-post.html">{!! $blog->title !!}</a>
-                                    </h4>
-                                </div>
-                            </article>
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="from-blog__recent-posts text-align-right ">
-                    <ul class="from-blog__recent-posts-list">
-                        <li class="from-blog__recent-posts-item">
-                            <span class="from-blog__post-number">1</span>
-                            <a href="{{ asset('frontend') }}/single-post.html" class="from-blog__post-url">Guadalajara
-                                offers "extraordinary opportunities" for
-                                young architects</a>
-                        </li>
-                        <li class="from-blog__recent-posts-item">
-                            <span class="from-blog__post-number">2</span>
-                            <a href="{{ asset('frontend') }}/single-post.html" class="from-blog__post-url">Lacy
-                                Brick by Pamphilon ArchitectsResidentialPamphilon Architects adds textured
-                                brick extension to Edwardian house in London</a>
-                        </li>
-                        <li class="from-blog__recent-posts-item">
-                            <span class="from-blog__post-number">3</span>
-                            <a href="{{ asset('frontend') }}/single-post.html" class="from-blog__post-url">Real estate is considered real property that includes land and anything permanently attached to it or built on it, whether natural or man-made.</a>
-                        </li>
-                        <li class="from-blog__recent-posts-item">
-                            <span class="from-blog__post-number">4</span>
-                            <a href="{{ asset('frontend') }}/single-post.html" class="from-blog__post-url">There are five main categories of real estate which include residential, commercial, industrial, raw land, and special use.</a>
-                        </li>
-                        <li class="from-blog__recent-posts-item">
-                            <span class="from-blog__post-number">5</span>
-                            <a href="{{ asset('frontend') }}/single-post.html" class="from-blog__post-url">Investing in real estate includes purchasing a home, rental property, or land.</a>
-                        </li>
-                        <li class="from-blog__recent-posts-item">
-                            <span class="from-blog__post-number">6</span>
-                            <a href="{{ asset('frontend') }}/single-post.html" class="from-blog__post-url">Indirect investment in real estate can be made via REITs or through pooled real estate investment.</a>
-                        </li>
-                    </ul>
                 </div>
 
             </div>

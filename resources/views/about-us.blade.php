@@ -38,7 +38,7 @@ Along with GlobeSt.com, our print publication Real Estate Forum and the RealShar
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <img src="{{ asset('/') }}img/tolu-olubode-PlBsJ5MybGc-unsplash.jpg" class="img-full-width"
+                    <img src="{{ asset('/') }}img/building.jpg" class="img-full-width"
                         alt="">
                 </div>
             </div>
